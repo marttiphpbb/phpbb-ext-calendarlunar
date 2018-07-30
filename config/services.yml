@@ -1,0 +1,11 @@
+services:
+    marttiphpbb.calendarlunar.listener:
+        class: marttiphpbb\calendarlunar\event\listener
+        arguments:
+            - '@language'
+            - '@marttiphpbb.calendarlunar.calc'
+        tags:
+            - { name: event.listener }
+
+    marttiphpbb.calendarlunar.calc:
+        class: marttiphpbb\calendarlunar\util\calc
